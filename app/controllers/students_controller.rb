@@ -11,7 +11,7 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
   end
 
-  def create_new
+  def insert
     @student = Student.create(first_name: params[:first_name], last_name: params[:last_name])
     redirect_to student_path(@student)
   end
